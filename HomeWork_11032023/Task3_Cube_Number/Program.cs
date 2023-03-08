@@ -5,11 +5,20 @@
 
 
 
-Console.WriteLine("Введите целое положительное число ");
-int inpuNumber = Convert.ToInt32(Console.ReadLine ());
+Console.Write("Введите целое положительное число ");
+int inputNumber = Convert.ToInt32(Console.ReadLine ());
 
-for (int i = 1; i <= inpuNumber; i++)
+if (inputNumber < 0)
 {
-    int result = (int) Math.Pow(i ,3);
-    System.Console.Write(result + " ");
+    System.Console.Write("Вы ошиблись");
 }
+
+else
+{
+    for (int i = 1; i <= inputNumber; i++)
+    {
+        int result = (int) Math.Pow(i ,3);
+        System.Console.Write(result + " ");
+    }
+}
+
